@@ -22,6 +22,8 @@
     if (stored === "system") document.documentElement.setAttribute("data-theme-pref", "system");
     else if (stored === "light" || stored === "dark") document.documentElement.setAttribute("data-theme-pref", stored);
     else document.documentElement.setAttribute("data-theme-pref", "system");
+    var metaTC = document.getElementById("theme-color-active");
+    if (metaTC) metaTC.setAttribute("content", t === "dark" ? "#161513" : "#F7F6F3");
   } catch (e) {
     document.documentElement.setAttribute("data-theme", "light");
     document.documentElement.setAttribute("data-theme-pref", "system");
@@ -42,7 +44,9 @@
 <meta name="twitter:title" content="PPP Calculator. Same money. Different prices." />
 <meta name="twitter:description" content="PPP salary / purchasing power calculator. World Bank consumption PPP + official FX." />
 <meta name="twitter:image" content="https://v2.ppp.tanishqnalloju.com/og-image.svg" />
-<meta name="theme-color" content="#F7F6F3" />
+<meta name="theme-color" content="#F7F6F3" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#161513" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" id="theme-color-active" content="#F7F6F3" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="styles.css" />
 <script type="application/ld+json">
