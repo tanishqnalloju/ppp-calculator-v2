@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F7F6F3"/>
+  <rect x="0" y="0" width="8" height="630" fill="#2F5D50"/>
+  <text x="80" y="260" font-family="Georgia, serif" font-size="72" font-weight="600" fill="#1C1B19">PPP Calculator</text>
+  <text x="80" y="340" font-family="Georgia, serif" font-size="36" font-style="italic" fill="#6F6B63">Same money. Different prices.</text>
+  <text x="80" y="520" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#9A958C">v2 preview · World Bank consumption PPP + FX</text>
+</svg>

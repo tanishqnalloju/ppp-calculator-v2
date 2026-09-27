@@ -1,0 +1,93 @@
+/* PPP Calculator v2 - token sketch only (not a full stylesheet)
+   Implement phase: import before base/components. No layout rules here. */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f7f6f3;
+  --bg-elevated: #ffffff;
+  --surface: #fbfbfa;
+  --border: #e8e6e1;
+  --border-strong: #d4d1ca;
+
+  --text: #1c1b19;
+  --text-secondary: #6f6b63;
+  --text-tertiary: #9a958c;
+
+  --accent: #2f5d50;
+  --accent-soft: #e8f0ed;
+  --accent-hover: #244a40;
+
+  --warn: #8a6a1f;
+  --warn-bg: #f5efe0;
+  --danger: #8f3a3a;
+
+  --focus-ring: #2f5d50;
+  --shadow-hair: 0 1px 2px rgba(28, 27, 25, 0.04);
+
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-md: 8px;
+
+  --font-sans: "Geist Sans", "Switzer", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --content: 42rem;
+  --space-section: 2.5rem;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #141311;
+  --bg-elevated: #1c1b18;
+  --surface: #22211e;
+  --border: #2e2c28;
+  --border-strong: #45423c;
+
+  --text: #eceae4;
+  --text-secondary: #a39e94;
+  --text-tertiary: #7a756c;
+
+  --accent: #7aad9a;
+  --accent-soft: #1e2e28;
+  --accent-hover: #96c4b4;
+
+  --warn: #d4b56a;
+  --warn-bg: #2a2618;
+  --danger: #d08888;
+
+  --focus-ring: #7aad9a;
+  --shadow-hair: none;
+}
+
+/* System preference when data-theme is unset (boot script usually sets explicit) */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]):not([data-theme="dark"]) {
+    color-scheme: dark;
+    --bg: #141311;
+    --bg-elevated: #1c1b18;
+    --surface: #22211e;
+    --border: #2e2c28;
+    --border-strong: #45423c;
+    --text: #eceae4;
+    --text-secondary: #a39e94;
+    --text-tertiary: #7a756c;
+    --accent: #7aad9a;
+    --accent-soft: #1e2e28;
+    --accent-hover: #96c4b4;
+    --warn: #d4b56a;
+    --warn-bg: #2a2618;
+    --danger: #d08888;
+    --focus-ring: #7aad9a;
+    --shadow-hair: none;
+  }
+}
+
+/* Utility hint for implementers - apply on money nodes */
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
