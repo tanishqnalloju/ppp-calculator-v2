@@ -38,10 +38,10 @@ header.app h1 {
 .theme-control {
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--bg);
+  background: var(--bg-elevated);
 }
 .theme-control button {
   appearance: none;
@@ -49,9 +49,10 @@ header.app h1 {
   background: transparent;
   color: var(--text-secondary);
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  padding: 0.35rem 0.55rem;
+  padding: 0.45rem 0.7rem;
+  min-height: 2rem;
   cursor: pointer;
   transition: color 160ms ease, background 160ms ease;
 }
@@ -67,13 +68,14 @@ header.app h1 {
 
 .share-btn {
   appearance: none;
-  border: 1px solid var(--border);
-  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elevated);
   color: var(--text-secondary);
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  padding: 0.35rem 0.65rem;
+  padding: 0.45rem 0.75rem;
+  min-height: 2rem;
   border-radius: var(--radius);
   cursor: pointer;
   transition: color 160ms ease, border-color 160ms ease;
@@ -134,15 +136,29 @@ select {
   font-size: 1rem;
   font-weight: 500;
   color: var(--text);
-  background: var(--bg);
+  background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 0.6rem 0.75rem;
   width: 100%;
   transition: border-color 160ms ease;
+  accent-color: var(--accent);
+  color-scheme: inherit;
 }
 input[type="text"]:hover,
 select:hover { border-color: var(--border-strong); }
+select option {
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+input[type="text"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill:hover,
+input[type="text"]:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
+  box-shadow: 0 0 0 1000px var(--bg-elevated) inset;
+  transition: background-color 99999s ease-out;
+}
 
 .picker-wrap { position: relative; }
 .picker-list {
@@ -219,7 +235,11 @@ select:hover { border-color: var(--border-strong); }
   background: var(--accent-soft);
   border-radius: var(--radius-md);
   padding: 1rem 1.1rem;
-  border: 1px solid transparent;
+  border: 1px solid transparent; /* soft wash only — no accent border */
+}
+[data-theme="dark"] .metric.primary {
+  border-color: transparent;
+  box-shadow: none;
 }
 .metric .label {
   font-size: 0.8125rem;
@@ -318,7 +338,7 @@ select:hover { border-color: var(--border-strong); }
 .commodities .intro {
   margin: 0 0 1rem;
   font-size: 0.8125rem;
-  color: var(--text-tertiary);
+  color: var(--text-secondary);
 }
 .strip {
   display: grid;
@@ -331,6 +351,10 @@ select:hover { border-color: var(--border-strong); }
   border-radius: var(--radius-md);
   padding: 0.65rem 0.75rem;
   font-size: 0.8rem;
+}
+[data-theme="dark"] .card {
+  border-color: var(--border-strong);
+  background: var(--bg-elevated);
 }
 .card .name {
   font-weight: 500;
@@ -378,6 +402,19 @@ select:hover { border-color: var(--border-strong); }
 .faq details {
   border-bottom: 1px solid var(--border);
   padding: 0.7rem 0;
+}
+[data-theme="dark"] .faq details,
+[data-theme="dark"] details.method {
+  border-color: var(--border-strong);
+}
+[data-theme="dark"] footer.app {
+  border-color: var(--border-strong);
+}
+[data-theme="dark"] .cost-line {
+  border-color: var(--border-strong);
+}
+[data-theme="dark"] .metric.secondary {
+  border-color: var(--border-strong);
 }
 .faq summary {
   cursor: pointer;

@@ -349,6 +349,8 @@
     document.documentElement.setAttribute("data-theme", resolved);
     document.documentElement.setAttribute("data-theme-pref", pref);
     try { localStorage.setItem(THEME_KEY, pref); } catch (_) {}
+    const metaTC = document.getElementById("theme-color-active");
+    if (metaTC) metaTC.setAttribute("content", resolved === "dark" ? "#161513" : "#F7F6F3");
     document.querySelectorAll("[data-theme-choice]").forEach((btn) => {
       btn.setAttribute("aria-pressed", btn.getAttribute("data-theme-choice") === pref ? "true" : "false");
     });
