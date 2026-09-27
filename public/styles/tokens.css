@@ -1,4 +1,4 @@
-/* PPP Calculator v2 — token sketch only (not a full stylesheet)
+/* PPP Calculator v2 - token sketch only (not a full stylesheet)
    Implement phase: import before base/components. No layout rules here. */
 
 :root,
@@ -86,7 +86,7 @@
   }
 }
 
-/* Utility hint for implementers — apply on money nodes */
+/* Utility hint for implementers - apply on money nodes */
 .tabular {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;

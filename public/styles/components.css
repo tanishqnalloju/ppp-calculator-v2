@@ -1,4 +1,4 @@
-/* PPP Calculator v2 — components (hairlines, dual hero, quiet commodities) */
+/* PPP Calculator v2 - components (hairlines, dual hero, quiet commodities) */
 
 /* Header */
 header.app {
@@ -89,7 +89,7 @@ header.app h1 {
   min-width: 3.5rem;
 }
 
-/* Inputs — open fields, no boxed panel */
+/* Inputs - open fields, no boxed panel */
 .inputs {
   margin-bottom: var(--space-section);
 }
@@ -271,7 +271,7 @@ select:hover { border-color: var(--border-strong); }
   letter-spacing: -0.015em;
 }
 
-/* Cost line — hairline, no panel */
+/* Cost line - hairline, no panel */
 .cost-line {
   display: flex;
   flex-wrap: wrap;
@@ -303,7 +303,7 @@ select:hover { border-color: var(--border-strong); }
   .cost-line #pliText { margin-left: 0; width: 100%; }
 }
 
-/* Commodities — quiet evidence */
+/* Commodities - quiet evidence */
 .commodities {
   margin: var(--space-section) 0;
   padding-top: 0.5rem;

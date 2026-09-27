@@ -1,4 +1,4 @@
-/* PPP Calculator v2 — reset, type, a11y, layout shell */
+/* PPP Calculator v2 - reset, type, a11y, layout shell */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -42,7 +42,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   padding: 1.5rem 1.25rem 4rem;
 }
 
-/* Skip link — visible on keyboard focus */
+/* Skip link - visible on keyboard focus */
 .skip-link {
   position: absolute;
   left: 1rem;
